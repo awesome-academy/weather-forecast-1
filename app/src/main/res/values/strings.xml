@@ -62,4 +62,6 @@
     <string name="text_dangerous_air_range">250+</string>
     <string name="text_test_lat">21.0203727</string>
     <string name="text_test_lon">105.7885139</string>
+    <string name="text_km"> Km/h</string>
+    <string name="error_not_type">Wrong type input</string>
 </resources>

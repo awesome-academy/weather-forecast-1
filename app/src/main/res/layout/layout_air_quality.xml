@@ -14,6 +14,7 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
         android:textStyle="bold"
+        android:fontFamily="@font/andes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,6 +41,7 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_48"
         android:textStyle="bold"
+        android:fontFamily="@font/andes"
         app:layout_constraintBottom_toBottomOf="@+id/progressAirQuality"
         app:layout_constraintEnd_toEndOf="@+id/progressAirQuality"
         app:layout_constraintStart_toStartOf="@+id/progressAirQuality"
@@ -60,6 +62,7 @@
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_32"
         android:textStyle="bold"
+        android:fontFamily="@font/andes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@+id/textDetail" />
@@ -72,6 +75,7 @@
         android:gravity="start"
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
+        android:fontFamily="@font/andes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline7"
         app:layout_constraintTop_toBottomOf="@id/textMeasure" />
@@ -87,6 +91,7 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_16"
+        android:fontFamily="@font/andes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/progressAirQuality" />

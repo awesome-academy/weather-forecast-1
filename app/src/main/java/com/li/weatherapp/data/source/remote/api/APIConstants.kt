@@ -5,6 +5,7 @@ object APIConstants {
     const val OPENWEATHER_AUTHORITY_API = "api.openweathermap.org"
     const val OPENWEATHER_CONTENT_ONE_CALL = "/data/2.5/onecall"
     const val OPENWEATHER_CONTENT_WEATHER = "/data/2.5/weather"
+    const val OPENWEATHER_CONTENT_AIR_POLLUTION = "/data/2.5/air_pollution"
 
     const val OPENWEATHER_API_KEY = "appid"
     const val OPENWEATHER_LAT = "lat"

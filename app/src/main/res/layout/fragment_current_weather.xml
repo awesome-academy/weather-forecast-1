@@ -17,6 +17,7 @@
             android:layout_marginTop="@dimen/dp_10"
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_20"
+            android:fontFamily="@font/andes"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,6 +29,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_80"
             android:textStyle="bold"
+            android:fontFamily="@font/andes"
             app:layout_constraintEnd_toStartOf="@+id/guidelineVertical60"
             app:layout_constraintStart_toStartOf="@id/viewLine"
             app:layout_constraintTop_toBottomOf="@id/textCurrentTime" />
@@ -40,6 +42,7 @@
             android:textColor="@android:color/white"
             android:textSize="@dimen/sp_54"
             android:textStyle="bold"
+            android:fontFamily="@font/andes"
             app:layout_constraintStart_toEndOf="@+id/textCurrentTemper"
             app:layout_constraintTop_toBottomOf="@id/textCurrentTime" />
 
