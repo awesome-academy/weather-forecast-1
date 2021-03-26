@@ -10,6 +10,7 @@ import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.ui.currentweather.CurrentWeatherFragment
 import com.li.weatherapp.ui.dailyforecast.DailyForecastFragment
 import com.li.weatherapp.ui.news.NewsFragment
+import com.li.weatherapp.ui.setting.SettingActivity
 import com.li.weatherapp.utils.Constants.DRAWABLE_ZERO_BOUND
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_appbar.*
@@ -49,6 +50,9 @@ class MainActivity : BaseActivity() {
         bottomNavigationView.apply {
             setOnNavigationItemSelectedListener(onBottomNavigationItemSelect)
             selectedItemId = R.id.menuCurrentWeather
+        }
+        buttonSetting.setOnClickListener {
+            startActivity(SettingActivity.getIntent(this))
         }
     }
 

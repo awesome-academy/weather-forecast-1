@@ -20,6 +20,10 @@
     <string name="title_detail">Detail</string>
     <string name="title_see_more">See More</string>
     <string name="title_wind_gust">Wind Gust</string>
+    <string name="title_notification">Notification</string>
+    <string name="title_language">Language</string>
+    <string name="title_about">About</string>
+    <string name="title_setting">Setting</string>
     <string name="title_uv">UV</string>
     <string name="text_degree">°C</string>
     <string name="text_percent">%</string>
@@ -65,4 +69,7 @@
     <string name="text_km"> Km/h</string>
     <string name="error_not_type">Wrong type input</string>
     <string name="text_news_image_desc">News Image</string>
+    <string name="text_language_image_desc">Language Image</string>
+    <string name="text_language_vietnamese">Vietnam</string>
+    <string name="text_language_english">English</string>
 </resources>

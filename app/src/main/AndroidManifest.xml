@@ -28,6 +28,7 @@
 
         <activity android:name=".ui.weatherdetail.WeatherDetailActivity" />
         <activity android:name=".ui.news.NewsActivity" />
+        <activity android:name=".ui.setting.SettingActivity" />
     </application>
 
 </manifest>
