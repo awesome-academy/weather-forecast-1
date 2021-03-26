@@ -64,4 +64,5 @@
     <string name="text_test_lon">105.7885139</string>
     <string name="text_km"> Km/h</string>
     <string name="error_not_type">Wrong type input</string>
+    <string name="text_news_image_desc">News Image</string>
 </resources>
