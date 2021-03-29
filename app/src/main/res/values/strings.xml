@@ -35,6 +35,7 @@
     <string name="title_CO2">CO2</string>
     <string name="title_SO2">SO2</string>
     <string name="title_NO2">NO2</string>
+    <string name="title_PM10">PM10</string>
     <string name="title_air_quality_range">Air Quality Range</string>
     <string name="title_wonderful">Wonderful</string>
     <string name="title_allow">Allow</string>

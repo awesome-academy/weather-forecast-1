@@ -6,6 +6,8 @@ import com.li.weatherapp.data.model.News
 import com.li.weatherapp.data.repository.NewsRepository
 import com.li.weatherapp.data.source.remote.NewsRemoteDataSource
 import com.li.weatherapp.ui.adapters.NewsAdapter
+import com.li.weatherapp.ui.setting.SettingFragment
+import com.li.weatherapp.utils.replaceFragment
 import com.li.weatherapp.utils.showToast
 import kotlinx.android.synthetic.main.fragment_news.*
 
@@ -30,6 +32,9 @@ class NewsFragment : BaseFragment(), NewsContract.View {
         swipeRefreshNews.setOnRefreshListener {
             swipeRefreshNews.isRefreshing = false
             presenter?.getNews()
+        }
+        buttonSettingNews.setOnClickListener {
+            fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
         }
     }
 

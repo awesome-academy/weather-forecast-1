@@ -6,6 +6,8 @@ import com.li.weatherapp.data.model.Daily
 import com.li.weatherapp.data.repository.DailyRepository
 import com.li.weatherapp.data.source.remote.DailyRemoteDataSource
 import com.li.weatherapp.ui.adapters.DailyForecastAdapter
+import com.li.weatherapp.ui.setting.SettingFragment
+import com.li.weatherapp.utils.replaceFragment
 import com.li.weatherapp.utils.showToast
 import kotlinx.android.synthetic.main.fragment_daily_forecast.*
 import java.util.*
@@ -37,6 +39,9 @@ class DailyForecastFragment : BaseFragment(), DailyForecastContract.View {
         swipeRefreshDaily.setOnRefreshListener {
             swipeRefreshDaily.isRefreshing = false
             getForecastByLocation()
+        }
+        buttonSettingDailyForecast.setOnClickListener {
+            fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
         }
     }
 

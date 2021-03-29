@@ -22,4 +22,13 @@ object AirPollutionUtils {
         in 150..249 -> context.resources.getString(R.string.text_very_harmful_air_description)
         else -> context.resources.getString(R.string.text_dangerous_air_description)
     }
+
+    fun getAirPollutionColor(context: Context, aqiDegree: Int) = when (aqiDegree) {
+        in 0..19 -> context.resources.getColor(R.color.chartreuse)
+        in 20..49 -> context.resources.getColor(R.color.coral)
+        in 50..99 -> context.resources.getColor(R.color.scarlet)
+        in 100..149 -> context.resources.getColor(R.color.rose)
+        in 150..249 -> context.resources.getColor(R.color.shocking_pink)
+        else -> context.resources.getColor(R.color.electric_violet)
+    }
 }
