@@ -33,6 +33,7 @@
         android:id="@+id/textTitleAirQuality"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/andes"
         android:text="@string/title_air_quality"
         android:textColor="@android:color/white"
         android:textSize="@dimen/sp_24"
@@ -66,6 +67,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent="0.5" />
 
+            <TextView
+                android:id="@+id/textAqiDegree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/andes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_48"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/progressAirQuality"
+                app:layout_constraintEnd_toEndOf="@+id/progressAirQuality"
+                app:layout_constraintStart_toStartOf="@+id/progressAirQuality"
+                app:layout_constraintTop_toTopOf="@+id/progressAirQuality" />
+
             <View
                 android:id="@+id/viewAirQuality"
                 android:layout_width="0dp"
@@ -80,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/andes"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/sp_24"
                 android:textStyle="bold"
@@ -92,6 +108,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/andes"
                 android:gravity="center"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/sp_16"

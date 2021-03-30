@@ -10,6 +10,7 @@ import com.li.weatherapp.data.repository.CurrentWeatherRepository
 import com.li.weatherapp.data.source.local.CurrentCityLocalDataSource
 import com.li.weatherapp.data.source.remote.AQIRemoteDataSource
 import com.li.weatherapp.data.source.remote.CurrentWeatherRemoteDataSource
+import com.li.weatherapp.ui.airquality.AirQualityFragment
 import com.li.weatherapp.ui.setting.SettingFragment
 import com.li.weatherapp.utils.*
 import kotlinx.android.synthetic.main.fragment_current_weather.*
@@ -23,6 +24,7 @@ import java.util.*
 class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.View {
     private var presenter: CurrentWeatherForecastContact.Presenter? = null
     private var cityName = ""
+    private var aqiDegree: AQI? = null
 
     override val layoutResource get() = R.layout.fragment_current_weather
 
@@ -50,6 +52,14 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
         buttonSettingCurrentWeather.setOnClickListener {
             fragmentManager?.replaceFragment(R.id.frameMain, SettingFragment())
         }
+        buttonAirInformation.setOnClickListener {
+            aqiDegree?.let {
+                fragmentManager?.replaceFragment(
+                    R.id.frameMain,
+                    AirQualityFragment.getInstance(it)
+                )
+            }
+        }
     }
 
     override fun showCurrentWeatherForecast(weather: CurrentWeather) {
@@ -71,6 +81,7 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
     }
 
     override fun showAQIForecast(airQuality: AQI) {
+        this.aqiDegree = airQuality
         textAqi.text = airQuality.aqi.toString()
         progressAirQuality.progress = airQuality.aqi
         textMeasure.text =
@@ -86,6 +97,7 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
     }
 
     override fun showMessage(data: Any) {
+        context?.showToast(data.toString())
     }
 
     private fun formatString(min: String, max: String) =
