@@ -1,5 +1,8 @@
 package com.li.weatherapp.ui.currentweather
 
+import android.annotation.SuppressLint
+import android.os.Bundle
+import android.view.View
 import com.li.weatherapp.R
 import com.li.weatherapp.base.BaseFragment
 import com.li.weatherapp.data.model.AQI
@@ -13,15 +16,19 @@ import com.li.weatherapp.data.source.remote.CurrentWeatherRemoteDataSource
 import com.li.weatherapp.ui.airquality.AirQualityFragment
 import com.li.weatherapp.ui.setting.SettingFragment
 import com.li.weatherapp.utils.*
+import com.li.weatherapp.utils.AirPollutionUtils
+import com.li.weatherapp.utils.Constants
+import com.li.weatherapp.utils.SharePreferenceHelper
 import kotlinx.android.synthetic.main.fragment_current_weather.*
 import kotlinx.android.synthetic.main.layout_air_quality.*
-import kotlinx.android.synthetic.main.layout_air_quality.progressAirQuality
 import kotlinx.android.synthetic.main.layout_temperature.*
 import kotlinx.android.synthetic.main.layout_weather_detail.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.View {
+
+class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.View,
+    View.OnClickListener {
     private var presenter: CurrentWeatherForecastContact.Presenter? = null
     private var cityName = ""
     private var aqiDegree: AQI? = null
@@ -30,6 +37,8 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
 
     override fun setupViews() {
         showCurrentTime()
+        buttonAirInformation.setOnClickListener(this)
+        buttonSeeMore.setOnClickListener(this)
     }
 
     override fun setupData() {
@@ -94,6 +103,19 @@ class CurrentWeatherFragment : BaseFragment(), CurrentWeatherForecastContact.Vie
         presenter?.getCurrentWeatherForecast(lat, lon)
         presenter?.getAQI(lat, lon)
         presenter?.setCityName(cityName)
+    }
+
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.buttonAirInformation -> {
+                aqiDegree?.let {
+                    fragmentManager?.replaceFragment(
+                        R.id.frameMain,
+                        AirQualityFragment.getInstance(it)
+                    )
+                }
+            }
+        }
     }
 
     override fun showMessage(data: Any) {

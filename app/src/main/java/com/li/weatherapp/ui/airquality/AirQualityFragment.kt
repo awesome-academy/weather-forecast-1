@@ -34,7 +34,7 @@ class AirQualityFragment : BaseFragment() {
         arguments?.getParcelable<AQI>(BUNDLE_AIR_QUALITY)?.apply {
             progressAirQuality.progress = this.aqi
             textAqiDegree.text = this.aqi.toString()
-            textCO2Info.text = this.airComponents.CODegree.toInt().toString()
+            textCOInfo.text = this.airComponents.CODegree.toInt().toString()
             textNO2Info.text = this.airComponents.NO2Degree.toInt().toString()
             textSO2Info.text = this.airComponents.SO2Degree.toInt().toString()
             textPM10Info.text = this.airComponents.PM10Degree.toInt().toString()
