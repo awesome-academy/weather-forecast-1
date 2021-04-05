@@ -6,30 +6,27 @@ import com.li.weatherapp.R
 object AirPollutionUtils {
 
     fun getAirPollutionTitle(context: Context, aqiDegree: Int) = when (aqiDegree) {
-        in 0..19 -> context.resources.getString(R.string.title_wonderful)
-        in 20..49 -> context.resources.getString(R.string.title_good)
-        in 50..99 -> context.resources.getString(R.string.title_bad)
-        in 100..149 -> context.resources.getString(R.string.title_harmful)
-        in 150..249 -> context.resources.getString(R.string.title_very_harmful)
-        else -> context.resources.getString(R.string.title_dangerous)
+        1 -> context.resources.getString(R.string.title_wonderful)
+        2 -> context.resources.getString(R.string.title_good)
+        3 -> context.resources.getString(R.string.title_bad)
+        4 -> context.resources.getString(R.string.title_harmful)
+        else -> context.resources.getString(R.string.title_very_harmful)
     }
 
     fun getAirPollutionDescription(context: Context, aqiDegree: Int) = when (aqiDegree) {
-        in 0..19 -> context.resources.getString(R.string.text_wonderful_air_description)
-        in 20..49 -> context.resources.getString(R.string.text_good_air_description)
-        in 50..99 -> context.resources.getString(R.string.text_bad_air_description)
-        in 100..149 -> context.resources.getString(R.string.text_harmful_air_description)
-        in 150..249 -> context.resources.getString(R.string.text_very_harmful_air_description)
-        else -> context.resources.getString(R.string.text_dangerous_air_description)
+        1 -> context.resources.getString(R.string.text_wonderful_air_description)
+        2 -> context.resources.getString(R.string.text_good_air_description)
+        3 -> context.resources.getString(R.string.text_bad_air_description)
+        4 -> context.resources.getString(R.string.text_harmful_air_description)
+        else -> context.resources.getString(R.string.text_very_harmful_air_description)
     }
 
     fun getAirPollutionColor(context: Context, aqiDegree: Int) = when (aqiDegree) {
-        in 0..19 -> getColor(context, R.color.chartreuse)
-        in 20..49 -> getColor(context, R.color.coral)
-        in 50..99 -> getColor(context, R.color.scarlet)
-        in 100..149 -> getColor(context, R.color.rose)
-        in 150..249 -> getColor(context, R.color.shocking_pink)
-        else -> getColor(context, R.color.electric_violet)
+        1 -> getColor(context, R.color.chartreuse)
+        2 -> getColor(context, R.color.coral)
+        3 -> getColor(context, R.color.scarlet)
+        4 -> getColor(context, R.color.rose)
+        else -> getColor(context, R.color.shocking_pink)
     }
 
     private fun getColor(context: Context, color: Int) = context.resources.getColor(color)

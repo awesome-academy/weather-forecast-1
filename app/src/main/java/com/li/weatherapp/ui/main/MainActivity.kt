@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.*
+import android.util.Log
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.FragmentManager
 import com.google.android.gms.location.FusedLocationProviderClient
@@ -22,6 +23,8 @@ import com.li.weatherapp.ui.dailyforecast.DailyForecastFragment
 import com.li.weatherapp.ui.favorite.FavoriteFragment
 import com.li.weatherapp.ui.hourly.HourlyForecastFragment
 import com.li.weatherapp.ui.news.NewsFragment
+import com.li.weatherapp.utils.Constants
+import com.li.weatherapp.utils.LocationServiceUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import com.li.weatherapp.utils.SharePreferenceHelper
 import com.li.weatherapp.utils.showToast
@@ -35,6 +38,8 @@ class MainActivity : BaseActivity(), BaseView {
     private val newsFragment = NewsFragment()
     private var locationProvider: FusedLocationProviderClient? = null
     private var presenter: CurrentCityContract.Presenter? = null
+    private var isEnableGPS = false
+    private var isEnableInternet = false
 
     private val onBottomNavigationItemSelect =
         BottomNavigationView.OnNavigationItemSelectedListener {
@@ -64,8 +69,14 @@ class MainActivity : BaseActivity(), BaseView {
                 )
             )
         )
-        locationProvider = LocationServices.getFusedLocationProviderClient(this)
-        getCurrentLocation()
+        isEnableGPS = LocationServiceUtils.getInstance(this).locationEnable()
+        isEnableInternet = LocationServiceUtils.getInstance(this).internetEnable()
+        if (!isEnableGPS || !isEnableInternet) {
+            showFragment(WarningFragment())
+        } else {
+            locationProvider = LocationServices.getFusedLocationProviderClient(this)
+            getCurrentLocation()
+        }
     }
 
     override fun showMessage(data: Any) {
@@ -106,8 +117,13 @@ class MainActivity : BaseActivity(), BaseView {
             locationProvider?.lastLocation?.addOnCompleteListener location@{ task ->
                 val location: Location = task.result ?: return@location
                 presenter?.apply {
-                    setLatitude(location.latitude)
-                    setLongitude(location.longitude)
+                    if (location != null) {
+                        setLatitude(location.latitude)
+                        setLongitude(location.longitude)
+                    } else {
+                        setLatitude(Constants.DEFAULT_LATITUDE)
+                        setLongitude(Constants.DEFAULT_LONGITUDE)
+                    }
                 }
                 setUpNavigation()
             }

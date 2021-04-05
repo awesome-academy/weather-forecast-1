@@ -219,47 +219,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textVeryHarmfulAir" />
 
-    <View
-        android:id="@+id/viewDangerousAir"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/dp_4"
-        android:layout_marginTop="@dimen/dp_16"
-        android:background="@color/electric_violet"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVertical30"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textVeryHarmfulAirDescription" />
-
-    <TextView
-        android:id="@+id/textDangerousAir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_16"
-        android:text="@string/title_dangerous"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewDangerousAir" />
-
-    <TextView
-        android:id="@+id/textDangerousAirRange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_dangerous_air_range"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textDangerousAir"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textDangerousAirDescription"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_8"
-        android:gravity="start"
-        android:text="@string/text_dangerous_air_description"
-        android:textSize="@dimen/sp_16"
-        app:layout_constraintEnd_toEndOf="@id/guidelineVertical70"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textDangerousAir" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineVertical30"
         android:layout_width="wrap_content"

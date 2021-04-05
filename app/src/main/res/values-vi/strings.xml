@@ -31,7 +31,6 @@
     <string name="title_bad">Xấu</string>
     <string name="title_harmful">Có hại</string>
     <string name="title_very_harmful">Độc hại</string>
-    <string name="title_dangerous">Nguy hiểm</string>
     <string name="title_CO2">CO2</string>
     <string name="title_SO2">SO2</string>
     <string name="title_NO2">NO2</string>
@@ -43,7 +42,7 @@
     <string name="title_allow">Cho phép</string>
     <string name="title_hourly_forecast">Dự Báo Theo Giờ</string>
     <string name="text_bad_air_quality_description">Không khí đã đạt đến mức ô nhiễm cao không phù hợp với những nhóm người nhạy cảm. Hãy hạn chế ra ngoài</string>
-    <string name="text_wonderful_air_range">0 - 19</string>
+    <string name="text_wonderful_air_range">1</string>
     <string name="text_wonderful_air_description">Chất lượng không khí lý tưởng cho hầu hết các đối tượng. Tận hưởng các hoạt động ngoài trời</string>
     <string name="text_good_air_description">Chất lượng không khí ở mức chấp nhận được đối với hầu hết các đối tượng nhưng không phù hợp với một số đối tượng nhạy cảm</string>
     <string name="text_bad_air_description">Không khí có mức độ ô nhiễm cao và không phù hợp với nhóm người nhạy cảm. Giảm thời gian ở bên ngoài nếu cơ thể xuất hiện các triệu chứng về đường hô hấp.</string>
@@ -51,14 +50,12 @@
         Nhóm nhạy cảm sẽ bị ảnh hưởng sức khỏe ngay lập tức. Đối tượng khỏe mạnh có thể bị khó thở, ngứa cổ</string>
     <string name="text_very_harmful_air_description">
         Nhóm nhạy cảm sẽ cảm nhận được tác động ngay lập tức và nên tránh các hoạt động ngoài trời. Đối tượng khỏe mạnh có thể bị khó thở và ngứa cổ, hãy cân nhắc ở nhà để tránh các hoạt động bên ngoài</string>
-    <string name="text_dangerous_air_description">Bất kỳ sự tiếp xúc nào với không khí dù chỉ vài phút cũng có thể gây ảnh hưởng nghiêm trọng đến sức khỏe. Tránh các hoạt động ngoài trời</string>
-    <string name="text_good_air_range">20 - 49</string>
-    <string name="text_bad_air_range">50 - 99</string>
-    <string name="text_harmful_air_range">100 - 149</string>
-    <string name="text_very_harmful_air_range">150 - 249</string>
-    <string name="text_dangerous_air_range">250+</string>
-    <string name="text_test_lat">21.0203727</string>
-    <string name="text_test_lon">105.7885139</string>
+    <string name="text_good_air_range">2</string>
+    <string name="text_bad_air_range">3</string>
+    <string name="text_harmful_air_range">4</string>
+    <string name="text_very_harmful_air_range">5</string>
+    <string name="text_test_lat">21.0160611</string>
+    <string name="text_test_lon">105.7817224</string>
     <string name="text_km"> Km/h</string>
     <string name="text_error_not_type">Nhập sai kiểu</string>
     <string name="text_news_image_desc">News Image</string>
@@ -79,7 +76,7 @@
     <string name="text_test_date">19/03</string>
     <string name="text_test_time">12:34</string>
     <string name="text_test_month">March</string>
-    <string name="text_permission">Cho phép quyền đối với ứng dụng Weather Forecast</string>
+    <string name="text_permission">Kiểm tra quyền, Internet và GPS để sử dụng ứng dụng Weather Forecast</string>
     <string name="text_warning_location">Không lấy được vị trí</string>
     <string name="text_notification_title">Thời tiết hôm nay</string>
     <string name="text_notification_temp_separate"> - </string>

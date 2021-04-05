@@ -32,7 +32,6 @@
     <string name="title_bad">Bad</string>
     <string name="title_harmful">Harmful</string>
     <string name="title_very_harmful">Very Harmful</string>
-    <string name="title_dangerous">Dangerous</string>
     <string name="title_CO2">CO2</string>
     <string name="title_SO2">SO2</string>
     <string name="title_NO2">NO2</string>
@@ -43,7 +42,7 @@
     <string name="title_search">Search</string>
     <string name="title_hourly_forecast">Hourly Forecast</string>
     <string name="text_bad_air_quality_description">The air has reached a high level of pollution that is not suitable for sensitive groups. Please limit out</string>
-    <string name="text_wonderful_air_range">0 - 19</string>
+    <string name="text_wonderful_air_range">1</string>
     <string name="text_wonderful_air_description">Air quality is ideal for most subjects. Enjoy normal outdoor activities</string>
     <string name="text_good_air_description">Air quality is acceptable for most subjects but not suitable for some sensitive subjects.</string>
     <string name="text_bad_air_description">The air has a high level of pollution and is not suitable for the sensitive group. Reduce the time spent outside if the body develops respiratory symptoms.</string>
@@ -51,14 +50,12 @@
         Sensitive groups will experience immediate health effects. Healthy subjects may experience shortness of breath, itchy neck.</string>
     <string name="text_very_harmful_air_description">
         Sensitive groups will feel the impact immediately and should avoid outdoor activities. Healthy subjects may experience difficulty and itchy neck, consider staying at home to avoid activities outside</string>
-    <string name="text_dangerous_air_description"> Any exposure to the air for even a few minutes can have serious health effects. Avoid outdoor activities</string>
-    <string name="text_good_air_range">20 - 49</string>
-    <string name="text_bad_air_range">50 - 99</string>
-    <string name="text_harmful_air_range">100 - 149</string>
-    <string name="text_very_harmful_air_range">150 - 249</string>
-    <string name="text_dangerous_air_range">250+</string>
-    <string name="text_test_lat">21.0203727</string>
-    <string name="text_test_lon">105.7885139</string>
+    <string name="text_good_air_range">2</string>
+    <string name="text_bad_air_range">3</string>
+    <string name="text_harmful_air_range">4</string>
+    <string name="text_very_harmful_air_range">5</string>
+    <string name="text_test_lat">21.0160611</string>
+    <string name="text_test_lon">105.7817224</string>
     <string name="text_km"> Km/h</string>
     <string name="text_error_not_type">Wrong type input</string>
     <string name="text_news_image_desc">News Image</string>
@@ -79,7 +76,7 @@
     <string name="text_test_date">19/03</string>
     <string name="text_test_time">12:34</string>
     <string name="text_test_month">March</string>
-    <string name="text_permission">Allow Permission to get Weather Forecast</string>
+    <string name="text_permission">Please Check Permission, GPS and Internet to get Weather Forecast</string>
     <string name="text_warning_location">Can not get location</string>
     <string name="text_notification_title">Today Weather</string>
     <string name="text_notification_temp_separate"> - </string>

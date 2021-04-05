@@ -21,4 +21,6 @@ object Constants {
     const val SHORT_DATE_FORMAT = "dd/MM"
     const val IS_FAVORITE_VALUE = 1
     const val NON_FAVORITE_VALUE = 0
+    const val DEFAULT_LATITUDE = 21.0160611
+    const val DEFAULT_LONGITUDE = 105.7817224
 }
