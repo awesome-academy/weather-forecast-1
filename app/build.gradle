@@ -52,4 +52,6 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     implementation "com.google.android.gms:play-services-location:17.0.0"
     implementation "com.google.android.gms:play-services-maps:17.0.0"
+    testImplementation "io.mockk:mockk:1.9.3"
+    androidTestImplementation "io.mockk:mockk-android:1.9.3"
 }
